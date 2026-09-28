@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hôm nay Vợ Yêu ăn gì?</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #ffe6e8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(255, 105, 180, 0.2);
+            text-align: center;
+            max-width: 400px;
+            width: 100%;
+        }
+
+        h1 {
+            color: #ff4d6d;
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .menu-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 20px;
+        }
+
+        .btn-option {
+            background-color: #fff0f3;
+            color: #ff4d6d;
+            border: 2px solid #ffb3c1;
+            padding: 12px 8px;
+            border-radius: 12px;
+            font-size: 15px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .btn-option:hover {
+            background-color: #ff4d6d;
+            color: white;
+            border-color: #ff4d6d;
+            transform: translateY(-2px);
+        }
+
+        #result-box {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 12px;
+            background-color: #fff5f5;
+            border: 1px dashed #ff4d6d;
+            display: none;
+        }
+
+        #result-title {
+            font-weight: bold;
+            color: #c9184a;
+            margin-bottom: 5px;
+        }
+
+        #result-desc {
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Hôm Nay Em Muốn Ăn Gì? ❤️</h1>
+        
+        <div class="menu-grid">
+            <button class="btn-option" onclick="selectFood(1)">1. Cơm Sườn</button>
+            <button class="btn-option" onclick="selectFood(2)">2. Hủ Tiếu</button>
+            <button class="btn-option" onclick="selectFood(3)">3. Bánh Canh</button>
+            <button class="btn-option" onclick="selectFood(4)">4. Gà Rán</button>
+            <button class="btn-option" onclick="selectFood(5)">5. Pizza</button>
+            <button class="btn-option" onclick="selectFood(6)">6. Bánh Mì Campuchia</button>
+            <button class="btn-option" onclick="selectFood(7)">7. Sashimi</button>
+            <button class="btn-option" onclick="selectFood(8)">8. Không Ăn Gì Hết</button>
+        </div>
+
+        <div id="result-box">
+            <div id="result-title"></div>
+            <div id="result-desc"></div>
+        </div>
+    </div>
+
+    <script>
+        function selectFood(choice) {
+            const resultBox = document.getElementById('result-box');
+            const resultTitle = document.getElementById('result-title');
+            const resultDesc = document.getElementById('result-desc');
+
+            // Xử lý logic switch-case giống hệt Java
+            switch (choice) {
+                case 1:
+                    resultTitle.innerText = "Nếu em muốn ăn Cơm Sườn!";
+                    resultDesc.innerText = "Mình sẽ ăn ở Hậu Giang nha 🍲";
+                    break;
+                case 2:
+                    resultTitle.innerText = "Nếu em muốn ăn Hủ Tiếu!";
+                    resultDesc.innerText = "Thì hôm nay mình sẽ ăn ở Nguyễn Trí Phương 🍜";
+                    break;
+                case 3:
+                    resultTitle.innerText = "Vợ iu muốn ăn Bánh Canh à?";
+                    resultDesc.innerText = "Vậy giờ mình đi ăn ở Thành Thái nha 🍲";
+                    break;
+                case 4:
+                    resultTitle.innerText = "Ra là hôm nay vợ iu muốn ăn Gà rồi!";
+                    resultDesc.innerText = "Vậy mình đi ăn Popeyes nhaaa 🍗";
+                    break;
+                case 5:
+                    resultTitle.innerText = "Vậy mình đi ăn Pizza hả vợ iu?";
+                    resultDesc.innerText = "Đi ăn Pizza ở Steak Bin nha 🍕";
+                    break;
+                case 6:
+                    resultTitle.innerText = "Món này vợ iu thích nè!";
+                    resultDesc.innerText = "Nhưng mà vợ chọn món này thì không đi ăn nha 😜";
+                    break;
+                case 7:
+                    resultTitle.innerText = "Món ăn cực yêu thích của vợ iu rồi!";
+                    resultDesc.innerText = "Nhưng mà bây giờ vợ không ăn được đâu 🍣";
+                    break;
+                case 8:
+                    resultTitle.innerText = "Trời ơi sao vợ iu lại không ăn vậy?";
+                    resultDesc.innerText = "Thôi chồng mua tôm càng cho vợ ăn nha 🦞❤️";
+                    break;
+            }
+
+            // Hiển thị khung kết quả
+            resultBox.style.display = 'block';
+        }
+    </script>
+
+</body>
+</html>
